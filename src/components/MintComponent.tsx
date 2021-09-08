@@ -8,7 +8,7 @@ import useStepper from "use-stepper";
 import web3 from "../ethereum/web3";
 import { Box, Button } from "@chakra-ui/react";
 
-import AppContract from "../output/NonConformingDucks.json";
+import AppContract from "../output/Astropets.json";
 
 const min = 1;
 const defaultValue = 1;
@@ -89,7 +89,7 @@ function MintComponent() {
   const connected = currentConnector === connector;
   const disabled = !triedEager || !!activatingConnector || connected || !!error;
 
-  function validValueClosestTo(desiredNumericValue) {
+  function validValueClosestTo(desiredNumericValue: number): string {
     return String(Math.min(max, Math.max(desiredNumericValue, min)));
   }
 

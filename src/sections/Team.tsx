@@ -17,15 +17,32 @@ const team = [
 
 function Team() {
   return (
-    <Flex bg="brand.background" width="100%">
-      <Stack direction={{ base: "column", md: "row" }}>
-        {team.map((each) => (
-          <Stack key={each.image}>
-            <Image src={each.image} />
-            <Text>{each.name}</Text>
-            <Text>{each.description}</Text>
-          </Stack>
-        ))}
+    <Flex
+      bg="brand.background"
+      width="100%"
+      align="center"
+      justify="center"
+      color="#000"
+      py={{ base: 20, md: 28 }}
+    >
+      <Stack align="center" spacing={{ base: 20, md: 28 }}>
+        <Text
+          as="h1"
+          fontSize="64px"
+          fontFamily="Herculanum"
+          textTransform="uppercase"
+        >
+          Team
+        </Text>
+        <Stack direction={{ base: "column", md: "row" }}>
+          {team.map((each) => (
+            <Stack key={each.image} spacing={{ base: 2, md: 8 }}>
+              <Image src={each.image} />
+              <Text>{each.name}</Text>
+              <Text>{each.description}</Text>
+            </Stack>
+          ))}
+        </Stack>
       </Stack>
     </Flex>
   );

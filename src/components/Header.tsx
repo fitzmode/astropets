@@ -52,7 +52,8 @@ const Header = (props: any) => {
       w="100%"
       p={8}
       bg={"background.theme"}
-      fontFamily="Rubik"
+      fontFamily="HelveticaRegular"
+      fontSize="19px"
       fontWeight="500"
       position="absolute"
       width="100%"
@@ -83,7 +84,7 @@ const Header = (props: any) => {
         >
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/faetures">Team</MenuItem>
-          <MenuItem to="/pricing">FAQ</MenuItem>
+          <MenuItem to="/pricing">Roadmap</MenuItem>
           <MenuItem to="/pricing">
             <IconButton
               variant="ghost"
@@ -134,24 +135,6 @@ const Header = (props: any) => {
                 bg: "none",
               }}
             />
-          </MenuItem>
-          <MenuItem to="/signup" isLast>
-            <Button
-              size="md"
-              px="16"
-              color={["primary.500", "primary.500", "white", "white"]}
-              bg={["white", "white", "primary.500", "primary.500"]}
-              _hover={{
-                bg: [
-                  "primary.100",
-                  "primary.100",
-                  "primary.600",
-                  "primary.600",
-                ],
-              }}
-            >
-              Mint
-            </Button>
           </MenuItem>
         </Flex>
       </Box>

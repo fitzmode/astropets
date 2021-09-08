@@ -6,6 +6,7 @@ import { store } from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import "./assets/fonts/font.css";
 // 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
   brand: {

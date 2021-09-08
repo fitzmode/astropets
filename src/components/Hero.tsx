@@ -37,10 +37,18 @@ export default function Hero({
       backgroundSize={{ base: "contain", md: "cover" }}
       pt="70px"
     >
-      <Stack textAlign="center">
+      <Stack
+        textAlign="center"
+        fontSize="20px"
+        fontFamily="HelveticaRegular"
+        align="center"
+        mb={8}
+      >
         <Image src={logo} />
-        <Image src={headerImage} />
-        <Text> Astropets</Text>
+        <Image width="400px" src={headerImage} />
+        <Text fontSize="24px" fontFamily="HelveticaBold">
+          Astropets
+        </Text>
         <Text> Digital Art x Collectible NFT</Text>
         <Text>
           {" "}

@@ -43,16 +43,25 @@ export default function FAQSection() {
     <Flex
       justifyContent="center"
       width="100%"
-      py={{ base: 20 }}
+      py={{ base: 20, md: 32 }}
       color="white"
       backgroundImage={`url(${headerBg})`}
       backgroundRepeat="no-repeat"
       backgroundAttachment="fixed"
       backgroundSize="cover"
+      fontFamily="HelveticaRegular"
     >
-      <Stack>
-        <Text> Frequently Asked Questions </Text>
-        <Accordion allowToggle width={{ base: "90%", md: "60%" }}>
+      <Stack width="100%" align="center">
+        <Text fontSize="32px" mb="40px">
+          Frequently Asked Questions
+        </Text>
+        <Accordion
+          allowToggle
+          width={{ base: "90%", md: "80%" }}
+          background="#ccc"
+          borderRadius="10px"
+          color="#48494a"
+        >
           {faqs.map((faq) => (
             <AccordionItem border="none" mb={4} p={4}>
               <h2>

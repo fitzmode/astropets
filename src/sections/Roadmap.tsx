@@ -1,4 +1,4 @@
-import { Flex, Text, Stack, Box } from "@chakra-ui/layout";
+import { Flex, Text, Stack, Box, Image } from "@chakra-ui/react";
 import React from "react";
 import ten from "../assets/Astropets_Roadmap10.png";
 import twentyfive from "../assets/Astropets_Roadmap25.png";
@@ -35,25 +35,39 @@ function Roadmap() {
       bg="brand.background"
       flex="1"
       width="100%"
-      align="center"
       color="#000"
+      alignItems="center"
+      justifyContent="center"
+      fontFamily="HelveticaRegular"
     >
-      <Stack align="center">
-        <Text as="h1" textTransform="uppercase">
+      <Stack align="center" mx={{ base: 12, md: 28 }}>
+        <Text
+          as="h1"
+          fontSize="64px"
+          fontFamily="Herculanum"
+          textTransform="uppercase"
+        >
           Roadmap
         </Text>
-        <Stack>
+        <Stack spacing={{ base: 12, md: 8 }}>
           {steps.map((step) => (
-            <Stack key={step.image} direction="row">
+            <Stack key={step.image} direction={{ base: "column", md: "row" }}>
               <Box
-                boxSize="170px"
-                backgroundImage={`url(${step.image})`}
-                backgroundRepeat="no-repeat"
-                backgroundPosition="center center"
-                borderRadius="50%"
-                backgroundSize="cover"
-              ></Box>
-              <Box display="flex" justifyContent="center" alignItems="center">
+                justifyContent="center"
+                alignItems="center"
+                display="flex"
+                width="170px"
+                height="170px"
+              >
+                <Image src={step.image} />
+              </Box>
+              <Box
+                fontSize="26px"
+                justifyContent="center"
+                alignItems="center"
+                display="flex"
+                px={{ base: 8, md: 8 }}
+              >
                 <Text as="p">{step.text}</Text>
               </Box>
             </Stack>
