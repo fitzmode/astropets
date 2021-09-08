@@ -31,10 +31,11 @@ function Team() {
           fontSize="64px"
           fontFamily="Herculanum"
           textTransform="uppercase"
+          textAlign="center"
         >
           Team
         </Text>
-        <Stack direction={{ base: "column", md: "row" }}>
+        <Stack direction={{ base: "column", md: "row" }} align="center">
           {team.map((each) => (
             <Stack key={each.image} spacing={{ base: 2, md: 8 }}>
               <Image src={each.image} />

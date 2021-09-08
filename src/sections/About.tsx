@@ -24,8 +24,8 @@ function About() {
           color="black"
           alignSelf="auto"
           fontSize="28px"
-          px={{ base: 14, md: 14 }}
-          py={{ base: 8, md: 8 }}
+          px={{ base: 2, md: 14 }}
+          py={{ base: 2, md: 8 }}
         >
           Buy Astropets Here
         </Button>
