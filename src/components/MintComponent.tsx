@@ -1,8 +1,8 @@
 import React from "react";
-import { injected } from "../connectors";
+import { injected } from "../lib/connectors";
 import { useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
-import { useEagerConnect, useInactiveListener } from "../hooks";
+import { useEagerConnect, useInactiveListener } from "../lib/hooks";
 
 import useStepper from "use-stepper";
 import web3 from "../ethereum/web3";
