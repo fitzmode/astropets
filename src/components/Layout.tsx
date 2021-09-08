@@ -15,7 +15,6 @@ export default function LandingLayout(props: any) {
     >
       <Header />
       {props.children}
-      <Footer />
     </Flex>
   );
 }

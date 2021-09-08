@@ -10,6 +10,7 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import headerBg from "../assets/header_bg.jpg";
+import Footer from "../components/Footer";
 
 const faqs = [
   {
@@ -84,6 +85,7 @@ export default function FAQSection() {
             </AccordionItem>
           ))}
         </Accordion>
+        <Footer />
       </Stack>
     </Flex>
   );
