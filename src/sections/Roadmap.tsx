@@ -49,9 +49,13 @@ function Roadmap() {
         >
           Roadmap
         </Text>
-        <Stack spacing={{ base: 12, md: 8 }}>
+        <Stack spacing={{ base: 12, md: 8 }} align="center">
           {steps.map((step) => (
-            <Stack key={step.image} direction={{ base: "column", md: "row" }}>
+            <Stack
+              key={step.image}
+              direction={{ base: "column", md: "row" }}
+              align="center"
+            >
               <Box
                 justifyContent="center"
                 alignItems="center"
