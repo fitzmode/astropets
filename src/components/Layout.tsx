@@ -9,8 +9,9 @@ export default function LandingLayout(props: any) {
       direction="column"
       align="center"
       position="relative"
-      {...props}
       color="#fff"
+      width="100%"
+      {...props}
     >
       <Header />
       {props.children}
