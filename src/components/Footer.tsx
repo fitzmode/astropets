@@ -51,8 +51,6 @@ const Footer = (props: any) => {
       w="100%"
       p={8}
       fontWeight="500"
-      bottom="0px"
-      position="absolute"
       fontSize="19px"
       fontFamily=""
       width="100%"
