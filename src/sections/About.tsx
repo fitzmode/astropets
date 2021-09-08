@@ -40,7 +40,7 @@ function About() {
           days after launch (or sooner if sold out!), after which your unique
           Astropets artwork will be revealed.
         </Text>
-        <Stack direction={{ base: "row" }} fontSize="28px">
+        <Stack direction={{ base: "column", md: "row" }} fontSize="28px">
           <Stack align="center" px={{ base: 4, md: 8 }}>
             <Image src={star} width="55px" />
             <Text>Unique artwork</Text>
