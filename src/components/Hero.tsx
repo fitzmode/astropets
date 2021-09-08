@@ -34,7 +34,7 @@ export default function Hero({
       backgroundImage={`url(${headerBg})`}
       backgroundRepeat="no-repeat"
       backgroundAttachment="fixed"
-      backgroundSize="cover"
+      backgroundSize={{ base: "contain", md: "cover" }}
       pt="70px"
     >
       <Stack textAlign="center">

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "drawing-87071"
+  },
+  "targets": {
+    "drawing-87071": {
+      "hosting": {
+        "astropets": [
+          "astropets"
+        ]
+      }
+    }
+  }
+}
