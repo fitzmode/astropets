@@ -67,21 +67,27 @@ const Footer = (props: any) => {
           <MenuItem to="/">Contact</MenuItem>
           <MenuItem to="/faetures">Terms & Conditions</MenuItem>
           <MenuItem to="/pricing">Disclaimer</MenuItem>
-          <MenuItem to="/pricing">
+          <MenuItem to="#">
             <IconButton
               variant="ghost"
               aria-label="Twitter"
               icon={<FaTwitter color="#fff" size="26" />}
+              onClick={() => {
+                window.open("https://twitter.com/AstropetsNFT", "_blank");
+              }}
               _hover={{
                 bg: "none",
               }}
             />
           </MenuItem>
-          <MenuItem to="/pricing">
+          <MenuItem to="/#">
             <IconButton
               variant="ghost"
               aria-label="Discord Link"
               leftIcon={<FaDiscord color="#fff" size="26" />}
+              onClick={() => {
+                window.open("https://discord.gg/YZBMRNjn8y", "_blank");
+              }}
               _hover={{
                 bg: "none",
               }}
