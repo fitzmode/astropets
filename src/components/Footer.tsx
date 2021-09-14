@@ -4,8 +4,17 @@ import { Box, Flex, Text, Button, IconButton } from "@chakra-ui/react";
 import Logo from "./Logo";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 
-const MenuItem = ({ children, isLast, to = "/", ...rest }: any) => {
-  return (
+const MenuItem = ({ children, isLast, to = "/", isIcon, ...rest }: any) => {
+  return isIcon ? (
+    <Text
+      mb={{ base: isLast ? 0 : 8, sm: 0 }}
+      mr={{ base: 0, sm: isLast ? 0 : 8 }}
+      display="block"
+      {...rest}
+    >
+      {children}
+    </Text>
+  ) : (
     <Text
       mb={{ base: isLast ? 0 : 8, sm: 0 }}
       mr={{ base: 0, sm: isLast ? 0 : 8 }}
@@ -46,10 +55,11 @@ const Footer = (props: any) => {
   return (
     <Flex
       align="center"
-      justify="space-between"
+      justify={{ base: "center", md: "space-between" }}
       wrap="wrap"
       w="100%"
-      p={8}
+      pt={8}
+      px={8}
       fontWeight="500"
       fontSize="19px"
       fontFamily=""
@@ -57,6 +67,13 @@ const Footer = (props: any) => {
       color={"white"}
       {...props}
     >
+      <Flex align="center">
+        <Logo
+          // w="100px"
+          // color={["white", "white", "primary.500", "primary.500"]}
+          color="#e76f51"
+        />
+      </Flex>
       <Box display={{ base: "block" }} flexBasis={{ base: "100%", md: "auto" }}>
         <Flex
           align="center"
@@ -67,7 +84,7 @@ const Footer = (props: any) => {
           <MenuItem to="/">Contact</MenuItem>
           <MenuItem to="/faetures">Terms & Conditions</MenuItem>
           <MenuItem to="/pricing">Disclaimer</MenuItem>
-          <MenuItem to="#">
+          <MenuItem isIcon>
             <IconButton
               variant="ghost"
               aria-label="Twitter"
@@ -80,18 +97,17 @@ const Footer = (props: any) => {
               }}
             />
           </MenuItem>
-          <MenuItem to="/#">
-            <IconButton
-              variant="ghost"
-              aria-label="Discord Link"
-              leftIcon={<FaDiscord color="#fff" size="26" />}
-              onClick={() => {
-                window.open("https://discord.gg/YZBMRNjn8y", "_blank");
-              }}
-              _hover={{
-                bg: "none",
-              }}
-            />
+          <MenuItem isIcon>
+            <a href="https://discord.gg/YZBMRNjn8y" target="_blank">
+              <IconButton
+                variant="ghost"
+                aria-label="Discord Link"
+                leftIcon={<FaDiscord color="#fff" size="26" />}
+                _hover={{
+                  bg: "none",
+                }}
+              />
+            </a>
           </MenuItem>
           <MenuItem to="/pricing">
             <IconButton

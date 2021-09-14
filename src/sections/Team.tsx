@@ -37,7 +37,7 @@ function Team() {
         </Text>
         <Stack direction={{ base: "column", md: "row" }} align="center">
           {team.map((each) => (
-            <Stack key={each.image} spacing={{ base: 2, md: 8 }}>
+            <Stack key={each.image} spacing={{ base: 2, md: 8 }} align="center">
               <Image src={each.image} />
               <Text>{each.name}</Text>
               <Text>{each.description}</Text>

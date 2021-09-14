@@ -4,8 +4,17 @@ import { Box, Flex, Text, Button, IconButton } from "@chakra-ui/react";
 import Logo from "./Logo";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
 
-const MenuItem = ({ children, isLast, to = "/", ...rest }: any) => {
-  return (
+const MenuItem = ({ children, isLast, to = "/", isIcon, ...rest }: any) => {
+  return isIcon ? (
+    <Text
+      mb={{ base: isLast ? 0 : 8, sm: 0 }}
+      mr={{ base: 0, sm: isLast ? 0 : 8 }}
+      display="block"
+      {...rest}
+    >
+      {children}
+    </Text>
+  ) : (
     <Text
       mb={{ base: isLast ? 0 : 8, sm: 0 }}
       mr={{ base: 0, sm: isLast ? 0 : 8 }}
@@ -60,14 +69,7 @@ const Header = (props: any) => {
       color={"white"}
       {...props}
     >
-      <Flex align="center">
-        <Logo
-          // w="100px"
-          // color={["white", "white", "primary.500", "primary.500"]}
-          color="#e76f51"
-        />
-      </Flex>
-
+      <Flex></Flex>
       <Box display={{ base: "block", md: "none" }} onClick={toggleMenu}>
         {show ? <CloseIcon /> : <MenuIcon />}
       </Box>
@@ -85,7 +87,7 @@ const Header = (props: any) => {
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/#">Team</MenuItem>
           <MenuItem to="/#">Roadmap</MenuItem>
-          <MenuItem to="#">
+          <MenuItem to="#" isIcon>
             <IconButton
               variant="ghost"
               aria-label="Twitter"
@@ -98,14 +100,14 @@ const Header = (props: any) => {
               }}
             />
           </MenuItem>
-          <MenuItem to="/#">
+          <MenuItem to="/#" isIcon>
             <IconButton
               variant="ghost"
               aria-label="Discord Link"
-              leftIcon={<FaDiscord color="#fff" size="26" />}
               onClick={() => {
                 window.open("https://discord.gg/YZBMRNjn8y", "_blank");
               }}
+              leftIcon={<FaDiscord color="#fff" size="26" />}
               _hover={{
                 bg: "none",
               }}

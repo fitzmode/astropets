@@ -1,12 +1,11 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Image } from "@chakra-ui/react";
+import footerLogo from "../assets/footer-logo.png";
 
 export default function Logo(props: any) {
   return (
     <Box {...props}>
-      {/* <Text fontSize="lg" fontWeight="bold">
-        Non Conformist Ducks
-      </Text> */}
+      <Image src={footerLogo} />
     </Box>
   );
 }

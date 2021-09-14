@@ -72,7 +72,9 @@ function Roadmap() {
                 display="flex"
                 px={{ base: 8, md: 8 }}
               >
-                <Text as="p">{step.text}</Text>
+                <Text as="p" textAlign={{ base: "center", md: "left" }}>
+                  {step.text}
+                </Text>
               </Box>
             </Stack>
           ))}

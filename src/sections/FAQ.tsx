@@ -44,7 +44,8 @@ export default function FAQSection() {
     <Flex
       justifyContent="center"
       width="100%"
-      py={{ base: 20, md: 32 }}
+      pt={{ base: 20, md: 32 }}
+      pb={{ base: 10, md: 0 }}
       color="white"
       backgroundImage={`url(${headerBg})`}
       backgroundRepeat="no-repeat"
