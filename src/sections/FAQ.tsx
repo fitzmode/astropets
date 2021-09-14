@@ -54,7 +54,7 @@ export default function FAQSection() {
       fontFamily="HelveticaRegular"
     >
       <Stack width="100%" align="center">
-        <Text fontSize="32px" mb="40px">
+        <Text fontSize="32px" fontWeight="500" mb="40px">
           Frequently Asked Questions
         </Text>
         <Accordion

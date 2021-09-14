@@ -12,7 +12,6 @@ const team = [
   { image: image2, name: "Name", description: "Description" },
   { image: image3, name: "Name", description: "Description" },
   { image: image4, name: "Name", description: "Description" },
-  { image: image5, name: "Name", description: "Description" },
 ];
 
 function Team() {
@@ -25,7 +24,7 @@ function Team() {
       color="#000"
       py={{ base: 20, md: 28 }}
     >
-      <Stack align="center" spacing={{ base: 20, md: 28 }}>
+      <Stack align="center" spacing={{ base: 8, md: 16 }}>
         <Text
           as="h1"
           fontSize="64px"
@@ -35,7 +34,11 @@ function Team() {
         >
           Team
         </Text>
-        <Stack direction={{ base: "column", md: "row" }} align="center">
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          spacing={{ base: 8, md: 20 }}
+          align="center"
+        >
           {team.map((each) => (
             <Stack key={each.image} spacing={{ base: 2, md: 8 }} align="center">
               <Image src={each.image} />
