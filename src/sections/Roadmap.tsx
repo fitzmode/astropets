@@ -9,23 +9,23 @@ import hundred from "../assets/Astropets_Roadmap100.png";
 const steps = [
   {
     image: ten,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum ipsum at lacinia semper.",
+    text: "Giveaway: 3 Astropets to three random minters. We want to reward our early supporters :)",
   },
   {
     image: twentyfive,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum ipsum at lacinia semper.",
+    text: "Giveaway: $500 to one lucky minter",
   },
   {
     image: fifty,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum ipsum at lacinia semper.",
+    text: "Merch: Customized merchandise will be awarded to 2 lucky minters. We'll let the community vote on the what merch you want us to create!",
   },
   {
     image: seventyfive,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum ipsum at lacinia semper.",
+    text: "Giveaway: $2,500 - we'll award five lucky minters $500 each",
   },
   {
     image: hundred,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fermentum ipsum at lacinia semper.",
+    text: "Donate 3 ETH to charity of choiceWe'll let the community vote on the charity for the donation.",
   },
 ];
 
@@ -39,6 +39,7 @@ function Roadmap() {
       alignItems="center"
       justifyContent="center"
       fontFamily="HelveticaRegular"
+      id="roadmap"
     >
       <Stack align="center" mx={{ base: 12, md: 28 }}>
         <Text

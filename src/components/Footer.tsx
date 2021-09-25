@@ -3,28 +3,7 @@ import { Link } from "wouter";
 import { Box, Flex, Text, Button, IconButton } from "@chakra-ui/react";
 import Logo from "./Logo";
 import { FaDiscord, FaTwitter } from "react-icons/fa";
-
-const MenuItem = ({ children, isLast, to = "/", isIcon, ...rest }: any) => {
-  return isIcon ? (
-    <Text
-      mb={{ base: isLast ? 0 : 8, sm: 0 }}
-      mr={{ base: 0, sm: isLast ? 0 : 8 }}
-      display="block"
-      {...rest}
-    >
-      {children}
-    </Text>
-  ) : (
-    <Text
-      mb={{ base: isLast ? 0 : 8, sm: 0 }}
-      mr={{ base: 0, sm: isLast ? 0 : 8 }}
-      display="block"
-      {...rest}
-    >
-      <Link to={to}>{children}</Link>
-    </Text>
-  );
-};
+import MenuItem from "./MenuItem";
 
 const CloseIcon = () => (
   <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -81,9 +60,9 @@ const Footer = (props: any) => {
           direction={["column", "row", "row", "row"]}
           pt={[4, 4, 0, 0]}
         >
-          <MenuItem to="/">Contact</MenuItem>
-          <MenuItem to="/faetures">Terms & Conditions</MenuItem>
-          <MenuItem to="/pricing">Disclaimer</MenuItem>
+          <MenuItem to="home">Home</MenuItem>
+          <MenuItem to="team">Team</MenuItem>
+          <MenuItem to="roadmap">Roadmap</MenuItem>
           <MenuItem isIcon>
             <IconButton
               variant="ghost"

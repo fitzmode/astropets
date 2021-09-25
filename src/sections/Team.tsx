@@ -8,10 +8,10 @@ import image4 from "../assets/web_image4.png";
 import image5 from "../assets/web_image5.png";
 
 const team = [
-  { image: image1, name: "Name", description: "Description" },
-  { image: image2, name: "Name", description: "Description" },
-  { image: image3, name: "Name", description: "Description" },
-  { image: image4, name: "Name", description: "Description" },
+  { image: image1, name: "Jupiter", description: "Design" },
+  { image: image2, name: "CJ", description: "Creative" },
+  { image: image3, name: "G Nifty", description: "Technical" },
+  { image: image4, name: "Gecko", description: "Development" },
 ];
 
 function Team() {
@@ -23,6 +23,7 @@ function Team() {
       justify="center"
       color="#000"
       py={{ base: 20, md: 28 }}
+      id="team"
     >
       <Stack align="center" spacing={{ base: 8, md: 16 }}>
         <Text
@@ -40,7 +41,12 @@ function Team() {
           align="center"
         >
           {team.map((each) => (
-            <Stack key={each.image} spacing={{ base: 2, md: 8 }} align="center">
+            <Stack
+              key={each.image}
+              spacing={{ base: 2, md: 4 }}
+              align="center"
+              fontSize="34px"
+            >
               <Image src={each.image} />
               <Text>{each.name}</Text>
               <Text>{each.description}</Text>

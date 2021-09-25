@@ -6,6 +6,16 @@ import About from "./sections/About";
 import FAQSection from "./sections/FAQ";
 import Roadmap from "./sections/Roadmap";
 import Team from "./sections/Team";
+import { Link, Route } from "wouter";
+
+function Routes() {
+  return (
+    <>
+      <Route path="/" component={App} />
+      <Route path="/inbox" component={App} />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -19,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default Routes;

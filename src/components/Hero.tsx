@@ -36,6 +36,7 @@ export default function Hero({
       backgroundAttachment="fixed"
       backgroundSize={{ base: "cover", md: "cover" }}
       pt="70px"
+      id="home"
     >
       <Stack
         textAlign="center"

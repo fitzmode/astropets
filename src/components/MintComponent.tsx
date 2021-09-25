@@ -67,7 +67,7 @@ function MintComponent() {
 
       const instance = new web3.eth.Contract(
         // @ts-ignore
-        AppContract,
+        AppContract.abi,
         "0x8be49fb1442a46c5f1b691a668d16ba4dfca17e1"
       );
 
